@@ -1,12 +1,12 @@
 # RF
- 
- - [ ] O usuário deve poder criar uma nova transação;
- - [ ] O usuário deve poder obter um resumo da sua conta;
- - [ ] O usuário deve poder listar todas transações que já ocorreram;
- - [ ] O usuário deve poder visualizar uma transação única;
- 
- # RN
- 
- - [ ] A transação pode ser do tipo crédito que somará ao valor total, ou débito subtrairá;
- - [ ] Deve ser possível identificarmos o usuário entre as requisições;
- - [ ] O usuário só pode visualizar transações o qual ele criou;
+
+- [ ] The user must be able to create a new transaction;
+- [ ] The user must be able to obtain a summary of his account;
+- [ ] The user must be able to list all transactions that have already occurred;
+- [ ] The user must be able to view a single transaction;
+
+# RN
+
+- [ ] The transaction can be of the credit type that will add to the total amount, or debit that will subtract;
+- [ ] It must be possible to identify the user between requests;
+- [ ] The user can only view transactions that he created;
