@@ -5,8 +5,11 @@ import fastifyCookie from '@fastify/cookie'
 
 const app = fastify()
 
-app.register(fastifyCookie)
+app.addHook('preHandler', async (request) => {
+  console.log(`[${request.method}]${request.url}`)
+})
 
+app.register(fastifyCookie)
 app.register(transactionsRoutes, {
   prefix: '/transactions',
 })
