@@ -1,5 +1,15 @@
 .qodo
+
+# Dependencies
 node_modules
-db/app.db
+
+#database
+db/*.db
+
+# Environment variables
 .env
 .env.test
+
+# Build
+build
+dist
