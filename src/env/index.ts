@@ -9,9 +9,10 @@ if (process.env.NODE_ENV === 'test') {
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('production'),
-  DATABASE_CLIENT: z
-    .enum(['sqlite', 'pg'])
-    .transform((val) => val.toLowerCase() as 'sqlite' | 'pg'),
+  DATABASE_CLIENT: z.preprocess(
+    (val) => (typeof val === 'string' ? val.toLowerCase() : val),
+    z.enum(['sqlite', 'pg']),
+  ),
   DATABASE_URL: z.string(),
   PORT: z.coerce.number().default(3333),
 })
